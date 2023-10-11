@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--    Panel de operaciones-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="34dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:id="@+id/solucion"
+        android:layout_margin="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/resultado"/>
+
+    <!--    Panel de Resultados-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="64dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:id="@+id/resultado"
+        android:layout_margin="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botones"/>
+
+    <!--Seccion de botones-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/botones">
+
+<!--Primer linea de botones        -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+<!--        BOTON DE Retroceso-->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:cornerRadius="36dp"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:text="C"
+            android:textSize="32dp"
+            android:id="@+id/borrado_retroceso"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/naranja"
+            android:layout_margin="12dp"
+            />
+<!--Boton de parentesis izquierdo-->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:cornerRadius="36dp"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:text="%"
+            android:textSize="32dp"
+            android:id="@+id/porcentaje"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/naranja"
+            android:layout_margin="12dp"
+            />
+
+<!--Boton de parentesis Derecho-->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:cornerRadius="36dp"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:text="p"
+            android:textSize="32dp"
+            android:id="@+id/potencia"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/naranja"
+            android:layout_margin="12dp"
+            />
+
+<!--Boton de division-->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:cornerRadius="36dp"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:text="/"
+            android:textSize="32dp"
+            android:id="@+id/division"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/naranja"
+            android:layout_margin="12dp"
+            />
+
+
+    </LinearLayout>
+
+
+        <!--Segunda linea de botones        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+<!--Numero 7-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="7"
+                android:textSize="32dp"
+                android:id="@+id/boton7"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+<!--            Boton 8-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="8"
+                android:textSize="32dp"
+                android:id="@+id/boton8"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+
+<!--Boton 9-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="9"
+                android:textSize="32dp"
+                android:id="@+id/boton9"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+<!--Boton de multiplicar-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="x"
+                android:textSize="32dp"
+                android:id="@+id/multiplicacion"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/naranja"
+                android:layout_margin="12dp"
+                />
+
+
+        </LinearLayout>
+
+        <!--Tercera linea de botones        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <!--Numero 4-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="4"
+                android:textSize="32dp"
+                android:id="@+id/boton4"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+            <!--            Boton 5-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="5"
+                android:textSize="32dp"
+                android:id="@+id/boton5"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+
+            <!--Boton 6-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="6"
+                android:textSize="32dp"
+                android:id="@+id/boton6"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+            <!--Boton de Suma-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="+"
+                android:textSize="32dp"
+                android:id="@+id/suma"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/naranja"
+                android:layout_margin="12dp"
+                />
+
+
+        </LinearLayout>
+
+        <!--Cuarta linea de botones        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <!--Numero 1-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="1"
+                android:textSize="32dp"
+                android:id="@+id/boton1"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+            <!--            Boton 2-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="2"
+                android:textSize="32dp"
+                android:id="@+id/boton2"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+
+            <!--Boton 3-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="3"
+                android:textSize="32dp"
+                android:id="@+id/boton3"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+            <!--Boton de resta-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="-"
+                android:textSize="32dp"
+                android:id="@+id/resta"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/naranja"
+                android:layout_margin="12dp"
+                />
+
+
+        </LinearLayout>
+
+        <!--Quinta linea de botones        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <!--Numero AC-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="AC"
+                android:textSize="20dp"
+                android:id="@+id/boton_allclean"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/naranja"
+                android:layout_margin="12dp"
+                />
+            <!--            Boton 0-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="0"
+                android:textSize="32dp"
+                android:id="@+id/boton0"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+
+            <!--Boton punto-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="."
+                android:textSize="32dp"
+                android:id="@+id/boton_punto"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                />
+            <!--Boton de igual-->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:text="="
+                android:textSize="32dp"
+                android:id="@+id/igual"
+                android:backgroundTint="@color/naranja"
+                android:textColor="@color/white"
+                android:layout_margin="12dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
